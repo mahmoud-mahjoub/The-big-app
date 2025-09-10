@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+    <header>
+        <h3>Notes</h3>
+        <button onclick="openDialog()">Add Note</button>
+    </header>
+    <dialog id = "noteDialog">
+        <h2>Add new note</h2>
+        <h3 class="title">Title</h3>
+        <input type="text" class="title-input">
+        <h3 class="Description">Note Description</h3>
+        <textarea class="desc-input"></textarea>
+        <div class="final">
+        <button class="cancel" onclick="closeDialog()">cancel</button>
+        <button class="Add lastBtn" onclick="addNote()">add</button>
+        </div> 
+    </dialog >
+    <div class="container" id="container">
+        <div class="allNotes">
+
+        </div>
+    </div>
+
+    <script src="notes.js"></script>
+</body>
+</html>
