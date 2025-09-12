@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list App</title>
+    <link rel="stylesheet" href="toDoList.css">
+</head>
+<body>
+<header>
+    <h2>To Do List</h2>
+    <button class="headerBtn" onclick="openDialog()">Add New Task</button>
+</header>
+<dialog id="TaskDialog" open>
+        <h3>Add new Task</h3>
+        <h5>Write Task here</h5>
+        <input type="text">
+        <div class="final">
+            <button class="cancelDialog" onclick="closeDialog()">Cancel</button>
+            <button class="Add" onclick="addTask()">Add</button>
+        </div>
+    </dialog>
+<div class="all tasks">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src = "toDoList.js"></script>
+</body>
