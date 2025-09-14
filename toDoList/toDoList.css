@@ -7,6 +7,9 @@
 input {
     outline:none;
 }
+.sliced {
+    text-decoration:line-through;
+}
 :root {
     --black: #1e1f26;
     --blue : #00ffff;
