@@ -19,25 +19,30 @@ function addTask() {
     toDo.push(todo);
     localStorage.setItem("toDoList", JSON.stringify(toDo));
     closeDialog();
-    addTaskToBody(todo);
+    addTaskToBody(todo , todo.id);
 }
-function addTaskToBody(todo) {
+function addTaskToBody(todo ,id) {
     let allTasks = document.querySelector(".allTasks");
     if (!allTasks) return;
     let div = document.createElement("div");
     div.classList.add("TaskDiv");
     allTasks.appendChild(div);
     let h3 = document.createElement("h3");
-    h3.classList.add("content")
+    h3.classList.add("content");
     h3.innerText =todo.text;
     div.appendChild(h3);
+    h3.addEventListener("click", () => {
+        h3.classList.toggle("sliced");
+    });
+    h3.addEventListener("dblclick", (event) => {
+        event.target.parentElement.remove();
+        toDo = toDo.filter(task => task.id !== id);
+        localStorage.setItem("toDoList", JSON.stringify(toDo));
+    });
 }
 function loadTasks() {
-    toDo.forEach(todo => addTaskToBody(todo));
+    toDo.forEach(todo => addTaskToBody(todo, todo.id));
 }
 window.addEventListener("DOMContentLoaded", loadTasks);
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("content")) {
-        e.target.classList.toggle("sliced");
-    }
-});
+
+
