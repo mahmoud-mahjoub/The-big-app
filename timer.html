@@ -7,16 +7,35 @@
 <link rel="styleSheet" href="timerApp/timer.css">
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
+    <header>
+        <h3>Timer App</h3>
+    </header>
+    <div class="timer">
+        <div class="picker">
+            <div class="pickerContainer">
+                <div class="wheel"><div></div></div>
+                <div class="highlight"></div>
+            </div>
+            <div class="pickerContainer">
+                <div class="wheel"></div>
+                <div class="highlight"></div>
+            </div>
+            <div class="pickerContainer">
+                <div class="wheel"></div>
+                <div class="highlight"></div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="setBtn" onclick="setTimer()">Set</button>
+            <button class="resetBtn" onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li class="btn active"><a href="timer.html">Timer</a></li>
+            <li class="btn"><a href="#">StopWatch</a></li>
+            <li class="btn"><a href="#">Alarm</a></li>
+        </ul>
+    </footer>
     <script src="timerApp/timer.js"></script>
 </body>
