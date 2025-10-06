@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    transition:var(--transition);
+}
+:root {
+    --black: #1e1f26;
+    --lime:#55ff14;
+    --opacity:0.9;
+    --transition:0.3;
+}
+body {
+    background-color: var(--black);
+    color:white;
+    font-family: Poppins, sans-serif;
+    position:relative;
+    height:100vh;
+}
+ul {
+    display:flex;
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:white;
+}
+header {
+    display:flex;
+    justify-content:space-between;
+    padding:10px 15px;
+    font-size:30px;
+    border-bottom:2px solid var(--lime);
+}
+/*? I used the camel case in all of my Class Names */
+.mainContainer {
+    position:absolute;
+    top:40%;
+    transform:translateY(-50%);
+    left:50%;
+    transform:translateX(-50%);
+}
+.mainContainer .stopWatch .time{
+    margin-bottom:40px;
+    font-size:60px;
+    font-weight:bold;
+    display:flex;
+}
+.mainContainer .btns {
+    display:flex;
+    gap:40px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+.mainContainer .btns .btn {
+    color:white;
+    background-color:var(--lime);
+    font-size:20px;
+    border-radius:10px;
+    padding:10px;
+    border:none;
+    cursor:pointer
+}
+.mainContainer .btns .btn:hover {
+    opacity: var(--opacity);
+}
+
+footer {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:20px;
+    padding-top:20px;
+    border-top:2px solid var(--lime);
+    display:flex;
+    gap:40px
+}
+footer .footerBtn {
+    border:2px solid var(--lime);
+    padding:10px;
+    color:white;
+    background-color:var(--black);
+    font-size:20px;
+    border-radius:10px;
+    font-weight:bold;
+    width:fit-content;
+    cursor:pointer;
+}
+footer .footerBtn:hover {
+    opacity:0.8;
+}
+footer .active {
+    border:none;
+    background-color:var(--lime);
+}
