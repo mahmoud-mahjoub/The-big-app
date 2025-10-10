@@ -3,7 +3,7 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
-    transition:var(--transition);
+    transition:0.5;
 }
 :root {
     --black: #1e1f26;
@@ -61,7 +61,7 @@ header {
     border-radius:10px;
     padding:10px;
     border:none;
-    cursor:pointer
+    cursor:pointer;
 }
 .mainContainer .btns .btn:hover {
     opacity: var(--opacity);
